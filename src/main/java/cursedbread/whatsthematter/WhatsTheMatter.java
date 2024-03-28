@@ -1,4 +1,4 @@
-package cursedbread.whatthematter;
+package cursedbread.whatsthematter;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
@@ -16,8 +16,8 @@ import turniplabs.halplibe.util.GameStartEntrypoint;
 import java.util.Properties;
 
 
-public class WhatTheMatter implements ModInitializer, GameStartEntrypoint {
-	public static final String MOD_ID = "whatthematter";
+public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
+	public static final String MOD_ID = "whatsthematter";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static BlockBuilder standardBlockBuilder = new BlockBuilder(MOD_ID)
 		.setNorthTexture(16, 8) // the coordinates of the blue N texture from the terrain atlas

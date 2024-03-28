@@ -1,4 +1,4 @@
-package cursedbread.whatthematter;
+package cursedbread.whatsthematter;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockGrass;
@@ -22,17 +22,17 @@ public class RedMatter extends Block {
 
 	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
 		if (world.getBlockId(x+1, y, z) == 0)  {
-			world.setBlock(x+1, y, z, WhatTheMatter.redMatter.id);
+			world.setBlock(x+1, y, z, WhatsTheMatter.redMatter.id);
 		} else if (world.getBlockId(x-1, y, z) == 0)  {
-			world.setBlock(x-1, y, z, WhatTheMatter.redMatter.id);
+			world.setBlock(x-1, y, z, WhatsTheMatter.redMatter.id);
 		}  else if (world.getBlockId(x, y+1, z) == 0)  {
-			world.setBlock(x, y+1, z, WhatTheMatter.redMatter.id);
+			world.setBlock(x, y+1, z, WhatsTheMatter.redMatter.id);
 		} else if (world.getBlockId(x, y-1, z) == 0)  {
-			world.setBlock(x, y-1, z, WhatTheMatter.redMatter.id);
+			world.setBlock(x, y-1, z, WhatsTheMatter.redMatter.id);
 		} else if (world.getBlockId(x, y, z+1) == 0)  {
-			world.setBlock(x, y, z+1, WhatTheMatter.redMatter.id);
+			world.setBlock(x, y, z+1, WhatsTheMatter.redMatter.id);
 		} else if (world.getBlockId(x, y, z-1) == 0)  {
-			world.setBlock(x, y, z-1, WhatTheMatter.redMatter.id);
+			world.setBlock(x, y, z-1, WhatsTheMatter.redMatter.id);
 		}
 	}
 }

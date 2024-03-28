@@ -19,14 +19,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"cursedbread.whatthematter.WhatTheMatter"
+			"cursedbread.whatsthematter.WhatsTheMatter"
     ],
 		"beforeGameStart": [
-			"cursedbread.whatthematter.WhatTheMatter"
+			"cursedbread.whatsthematter.WhatsTheMatter"
 		]
 	},
   "mixins": [
-      "whatthematter.mixins.json"
+      "whatsthematter.mixins.json"
   ],
 
   "depends": {
