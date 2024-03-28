@@ -69,11 +69,11 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 
 		orangeMatter = matterBlock
 			.setTextures("orangematter.png")
-			.build(new OrangeMatter("graymatter", blockId++));
+			.build(new OrangeMatter("orangematter", blockId++));
 
 		blueMatter = matterBlock
 			.setTextures("bluematter.png")
-			.build(new BlueMatter("graymatter", blockId++));
+			.build(new BlueMatter("bluematter", blockId++));
 
 
 	}
