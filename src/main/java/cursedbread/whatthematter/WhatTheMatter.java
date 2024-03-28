@@ -58,11 +58,11 @@ public class WhatTheMatter implements ModInitializer, GameStartEntrypoint {
 	public void beforeGameStart() {
 
 		redMatter = matterBlock
-			.setTextures("redMatter.png")
+			.setTextures("redmatter.png")
 			.build(new RedMatter("redmatter", blockId++));
 
 		grayMatter = matterBlock
-			.setTextures("grayMatter.png")
+			.setTextures("graymatter.png")
 			.build(new GrayMatter("graymatter", blockId++));
 
 
