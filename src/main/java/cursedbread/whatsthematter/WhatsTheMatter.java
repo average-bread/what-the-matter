@@ -39,6 +39,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 
 	public static Block redMatter;
 	public static Block grayMatter;
+	public static Block orangeMatter;
+	public static Block blueMatter;
 
 	static {
 		Properties prop = new Properties();
@@ -64,6 +66,14 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		grayMatter = matterBlock
 			.setTextures("graymatter.png")
 			.build(new GrayMatter("graymatter", blockId++));
+
+		orangeMatter = matterBlock
+			.setTextures("orangematter.png")
+			.build(new OrangeMatter("graymatter", blockId++));
+
+		blueMatter = matterBlock
+			.setTextures("bluematter.png")
+			.build(new BlueMatter("graymatter", blockId++));
 
 
 	}

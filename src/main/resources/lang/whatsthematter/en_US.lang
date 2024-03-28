@@ -4,3 +4,11 @@ tile.whatsthematter.redmatter.desc=Block of unknown matter that definitely "shou
 tile.whatsthematter.graymatter.name=Gray Matter
 tile.whatsthematter.graymatter.desc=Block of unknown matter that will eat your world
 
+tile.whatsthematter.orangematter.name=Orange Matter
+tile.whatsthematter.orangematter.desc=Block of unknown matter that will fill your world with lava
+
+
+tile.whatsthematter.bluematter.name=Blue Matter
+tile.whatsthematter.bluematter.desc=Block of unknown matter that will fill your world with water
+
+
