@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "whatthematter",
+  "version": "${version}",
+
+  "name": "What the Matter?",
+  "description": "Blocks that can cause too much troubles if end up in a *right* hands",
+  "authors": [
+		"Bread (with a lot of extra help)"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+	"icon": "icon.png",
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+			"cursedbread.whatthematter.WhatTheMatter"
+    ],
+		"beforeGameStart": [
+			"cursedbread.whatthematter.WhatTheMatter"
+		]
+	},
+  "mixins": [
+      "whatthematter.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.13.3"
+  },
+  "suggests": {
+  }
+}
