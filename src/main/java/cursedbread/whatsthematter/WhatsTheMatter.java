@@ -57,11 +57,11 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id","2000");
 		prop.setProperty("starting_item_id","17000");
-		prop.setProperty("Containment_Note_crafting(0_means_no_|_1_means_yes)", "0");
-		prop.setProperty("Red_Matter_crafting(0_means_no_|_1_means_yes)", "0");
-		prop.setProperty("Gray_Matter_crafting(0_means_no_|_1_means_yes)", "0");
-		prop.setProperty("Orange_Matter_crafting(0_means_no_|_1_means_yes)", "0");
-		prop.setProperty("Blue_Matter_crafting(0_means_no_|_1_means_yes)", "0");
+		prop.setProperty("Containment_Note_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Red_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Gray_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Orange_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Blue_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
