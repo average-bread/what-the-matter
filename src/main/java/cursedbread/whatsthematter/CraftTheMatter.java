@@ -103,7 +103,7 @@ public class CraftTheMatter implements RecipeEntrypoint {
 				.addInput('H', Item.bucketWater)
 				.addInput('B', Item.bucketLava)
 				.addInput('M', WhatsTheMatter.whiteMatter)
-				.create("coldMatterCrafting", new ItemStack(WhatsTheMatter.coldMatter, 1));
+				.create("coldMatterCrafting", new ItemStack(WhatsTheMatter.hotMatter, 1));
 		}
 	}
 }
