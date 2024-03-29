@@ -1,10 +1,12 @@
 package cursedbread.whatsthematter;
 
+import cursedbread.whatsthematter.matterblocks.BlueMatter;
+import cursedbread.whatsthematter.matterblocks.GrayMatter;
+import cursedbread.whatsthematter.matterblocks.OrangeMatter;
+import cursedbread.whatsthematter.matterblocks.RedMatter;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.Block;
-import net.minecraft.core.block.BlockTorch;
-import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.sound.BlockSounds;
 import org.slf4j.Logger;
@@ -36,6 +38,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		.setBlockSound(BlockSounds.STONE);
 
 	public static int blockId;
+	public static int craftsEnabled;
 
 	public static Block redMatter;
 	public static Block grayMatter;
@@ -45,9 +48,11 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	static {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id","2000");
+		prop.setProperty("do_crafting (0 - no, 1 - yes)", "0");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
+		craftsEnabled = config.getInt("do_crafting (0 - no, 1 - yes)");
 
 		config.updateConfig();
 	}

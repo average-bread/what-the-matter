@@ -1,5 +1,6 @@
-package cursedbread.whatsthematter;
+package cursedbread.whatsthematter.matterblocks;
 
+import cursedbread.whatsthematter.WhatsTheMatter;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockGrass;
 import net.minecraft.core.block.material.Material;
