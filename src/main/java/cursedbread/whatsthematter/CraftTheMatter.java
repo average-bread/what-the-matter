@@ -30,28 +30,41 @@ public class CraftTheMatter implements RecipeEntrypoint {
 	}
 	@Override
 	public void onRecipesReady() {
-		if (WhatsTheMatter.redCraftsEnabled == 1) {
+		if (WhatsTheMatter.noteCraftsEnabled == 1) {
 			RecipeBuilder.Shapeless(MOD_ID)
-				.addInput(Block.blockRedstone)
-				.addInput(Block.blockRedstone)
+				.addInput(Item.book)
+				.addInput(Item.dye, 15)
+				.addInput(Item.featherChicken)
+				.addInput(Item.dustGlowstone)
+				.addInput(Item.dustRedstone)
+				.create("containmentNoteCrafting", new ItemStack(WhatsTheMatter.containingNote, 1));
+		}
+		if (WhatsTheMatter.redCraftsEnabled == 1) {
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', Block.blockRedstone)
+				.addInput('M', WhatsTheMatter.whiteMatter)
 				.create("redMatterCrafting", new ItemStack(WhatsTheMatter.redMatter, 1));
 		}
 		if (WhatsTheMatter.grayCraftsEnabled == 1) {
-			RecipeBuilder.Shapeless(MOD_ID)
-				.addInput(Block.blockSteel)
-				.addInput(Block.blockSteel)
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', Block.blockSteel)
+				.addInput('M', WhatsTheMatter.whiteMatter)
 				.create("grayMatterCrafting", new ItemStack(WhatsTheMatter.grayMatter, 1));
 		}
 		if (WhatsTheMatter.orangeCraftsEnabled == 1) {
-			RecipeBuilder.Shapeless(MOD_ID)
-				.addInput(Item.bucketLava)
-				.addInput(Item.bucketLava)
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', Item.bucketLava)
+				.addInput('M', WhatsTheMatter.whiteMatter)
 				.create("orangeMatterCrafting", new ItemStack(WhatsTheMatter.orangeMatter, 1));
 		}
 		if (WhatsTheMatter.blueCraftsEnabled == 1) {
-			RecipeBuilder.Shapeless(MOD_ID)
-				.addInput(Item.bucketWater)
-				.addInput(Item.bucketWater)
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', Item.bucketWater)
+				.addInput('M', WhatsTheMatter.whiteMatter)
 				.create("blueMatterCrafting", new ItemStack(WhatsTheMatter.blueMatter, 1));
 		}
 	}

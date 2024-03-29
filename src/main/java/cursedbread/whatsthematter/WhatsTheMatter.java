@@ -39,6 +39,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 
 	public static int blockId;
 	public static int itemId;
+	public static int noteCraftsEnabled;
 	public static int redCraftsEnabled;
 	public static int grayCraftsEnabled;
 	public static int orangeCraftsEnabled;
@@ -56,6 +57,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id","2000");
 		prop.setProperty("starting_item_id","17000");
+		prop.setProperty("Containment_Note_crafting(0_means_no_|_1_means_yes)", "0");
 		prop.setProperty("Red_Matter_crafting(0_means_no_|_1_means_yes)", "0");
 		prop.setProperty("Gray_Matter_crafting(0_means_no_|_1_means_yes)", "0");
 		prop.setProperty("Orange_Matter_crafting(0_means_no_|_1_means_yes)", "0");
@@ -65,6 +67,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		blockId = config.getInt("starting_block_id");
 		itemId = config.getInt("starting_item_id");
 
+		noteCraftsEnabled = config.getInt("Containment_Note_crafting(0_means_no_|_1_means_yes)");
 		redCraftsEnabled = config.getInt("Red_Matter_crafting(0_means_no_|_1_means_yes)");
 		grayCraftsEnabled = config.getInt("Gray_Matter_crafting(0_means_no_|_1_means_yes)");
 		orangeCraftsEnabled= config.getInt("Orange_Matter_crafting(0_means_no_|_1_means_yes)");
