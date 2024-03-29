@@ -51,17 +51,18 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	static {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id","2000");
-		prop.setProperty("Red Matter crafting (0 - no, 1 - yes)", "0");
-		prop.setProperty("Gray Matter crafting (0 - no, 1 - yes)", "0");
-		prop.setProperty("Orange Matter crafting (0 - no, 1 - yes)", "0");
-		prop.setProperty("Blue Matter crafting (0 - no, 1 - yes)", "0");
+		prop.setProperty("Red_Matter_crafting(0_means_no_|_1_means_yes)", "0");
+		prop.setProperty("Gray_Matter_crafting(0_means_no_|_1_means_yes)", "0");
+		prop.setProperty("Orange_Matter_crafting(0_means_no_|_1_means_yes)", "0");
+		prop.setProperty("Blue_Matter_crafting(0_means_no_|_1_means_yes)", "0");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
-		redCraftsEnabled = config.getInt("Red Matter crafting (0 - no, 1 - yes)");
-		grayCraftsEnabled = config.getInt("Gray Matter crafting (0 - no, 1 - yes)");
-		orangeCraftsEnabled= config.getInt("Orange Matter crafting (0 - no, 1 - yes)");
-		blueCraftsEnabled = config.getInt("Blue Matter crafting (0 - no, 1 - yes)");
+
+		redCraftsEnabled = config.getInt("Red_Matter_crafting(0_means_no_|_1_means_yes)");
+		grayCraftsEnabled = config.getInt("Gray_Matter_crafting(0_means_no_|_1_means_yes)");
+		orangeCraftsEnabled= config.getInt("Orange_Matter_crafting(0_means_no_|_1_means_yes)");
+		blueCraftsEnabled = config.getInt("Blue_Matter_crafting(0_means_no_|_1_means_yes)");
 
 		config.updateConfig();
 	}
