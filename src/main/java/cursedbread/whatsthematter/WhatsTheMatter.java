@@ -1,17 +1,17 @@
 package cursedbread.whatsthematter;
 
-import cursedbread.whatsthematter.matterblocks.BlueMatter;
-import cursedbread.whatsthematter.matterblocks.GrayMatter;
-import cursedbread.whatsthematter.matterblocks.OrangeMatter;
-import cursedbread.whatsthematter.matterblocks.RedMatter;
+import cursedbread.whatsthematter.matterblocks.*;
+import cursedbread.whatsthematter.miscitems.ContainingNote;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.item.Item;
 import net.minecraft.core.sound.BlockSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.BlockBuilder;
+import turniplabs.halplibe.helper.ItemHelper;
 import turniplabs.halplibe.util.ConfigHandler;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 
@@ -38,6 +38,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		.setBlockSound(BlockSounds.STONE);
 
 	public static int blockId;
+	public static int itemId;
 	public static int redCraftsEnabled;
 	public static int grayCraftsEnabled;
 	public static int orangeCraftsEnabled;
@@ -47,10 +48,14 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static Block grayMatter;
 	public static Block orangeMatter;
 	public static Block blueMatter;
+	public static Block whiteMatter;
+
+	public static Item containingNote;
 
 	static {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id","2000");
+		prop.setProperty("starting_item_id","17000");
 		prop.setProperty("Red_Matter_crafting(0_means_no_|_1_means_yes)", "0");
 		prop.setProperty("Gray_Matter_crafting(0_means_no_|_1_means_yes)", "0");
 		prop.setProperty("Orange_Matter_crafting(0_means_no_|_1_means_yes)", "0");
@@ -58,6 +63,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
+		itemId = config.getInt("starting_item_id");
 
 		redCraftsEnabled = config.getInt("Red_Matter_crafting(0_means_no_|_1_means_yes)");
 		grayCraftsEnabled = config.getInt("Gray_Matter_crafting(0_means_no_|_1_means_yes)");
@@ -90,6 +96,11 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 			.setTextures("bluematter.png")
 			.build(new BlueMatter("bluematter", blockId++));
 
+		whiteMatter = matterBlock
+			.setTextures("whitematter.png")
+			.build(new WhiteMatter("whitematter", blockId++));
+
+		containingNote = ItemHelper.createItem(MOD_ID, new ContainingNote("containingnote", itemId++), "containing_note.png");
 
 	}
 

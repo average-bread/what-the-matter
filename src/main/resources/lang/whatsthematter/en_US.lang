@@ -1,3 +1,6 @@
+item.whatsthematter.containingnote.name=Containing Note
+item.whatsthematter.containingnote.desc=Containing note to spawn an unknown matter
+
 tile.whatsthematter.redmatter.name=Red Matter
 tile.whatsthematter.redmatter.desc=Block of unknown matter that definitely "should" be placed near the open air
 
@@ -11,4 +14,5 @@ tile.whatsthematter.orangematter.desc=Block of unknown matter that will fill you
 tile.whatsthematter.bluematter.name=Blue Matter
 tile.whatsthematter.bluematter.desc=Block of unknown matter that will fill your world with water
 
-
+tile.whatsthematter.whitematter.name=White Matter
+tile.whatsthematter.whitematter.desc=Block of unknown matter that is used to craft other matter blocks
