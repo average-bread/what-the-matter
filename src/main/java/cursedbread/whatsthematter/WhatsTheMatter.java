@@ -45,12 +45,14 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static int grayCraftsEnabled;
 	public static int orangeCraftsEnabled;
 	public static int blueCraftsEnabled;
+	public static int spongeCraftsEnabled;
 
 	public static Block redMatter;
 	public static Block grayMatter;
 	public static Block orangeMatter;
 	public static Block blueMatter;
 	public static Block whiteMatter;
+	public static Block spongeMatter;
 
 	public static Item containingNote;
 
@@ -63,6 +65,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		prop.setProperty("Gray_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Orange_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Blue_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Sponge_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
@@ -73,6 +76,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		grayCraftsEnabled = config.getInt("Gray_Matter_crafting(0_means_no_|_1_means_yes)");
 		orangeCraftsEnabled= config.getInt("Orange_Matter_crafting(0_means_no_|_1_means_yes)");
 		blueCraftsEnabled = config.getInt("Blue_Matter_crafting(0_means_no_|_1_means_yes)");
+		spongeCraftsEnabled = config.getInt("Sponge_Matter_crafting(0_means_no_|_1_means_yes)");
 
 		config.updateConfig();
 	}
@@ -103,6 +107,10 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		whiteMatter = matterBlock
 			.setTextures("white_matter.png")
 			.build(new WhiteMatter("whitematter", blockId++));
+
+		spongeMatter = matterBlock
+			.setTextures("sponge_matter.png")
+			.build(new SpongeMatter("spongematter", blockId++));
 
 		containingNote = ItemHelper.createItem(MOD_ID, new ContainingNote("containingnote", itemId++), "containing_note.png");
 

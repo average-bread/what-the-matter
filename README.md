@@ -5,7 +5,8 @@
 2. Gray Matter
 3. Orange Matter
 4. Blue Matter
-5. White matter
+5. White Matter
+6. Sponge Matter
 
 * Red Matter is based on red crystal from the old SCP mod. It will grow infinitely but can be stopped and contained using...walls
 
@@ -16,6 +17,8 @@
 * Blue Matter is a block that will glow horizontally and transform into water and can fill infinite sized areas. Works like old water block
 
 * White Matter can be summoned using Containment Note and it is used to craft all the other matter blocks and grow when exploded
+
+* Sponge Matter is a block that removes any water or lava it comes in contact
 
 ## Items
 1. Containment Note

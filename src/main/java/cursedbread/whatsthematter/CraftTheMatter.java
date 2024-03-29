@@ -27,6 +27,10 @@ public class CraftTheMatter implements RecipeEntrypoint {
 			WhatsTheMatter.grayMatter,
 			WhatsTheMatter.orangeMatter,
 			WhatsTheMatter.blueMatter));
+
+		Registries.ITEM_GROUPS.register("whatsthematter:sponges", Registries.stackListOf(
+			Block.spongeDry,
+			Block.spongeWet));
 	}
 	@Override
 	public void onRecipesReady() {
@@ -66,6 +70,14 @@ public class CraftTheMatter implements RecipeEntrypoint {
 				.addInput('H', Item.bucketWater)
 				.addInput('M', WhatsTheMatter.whiteMatter)
 				.create("blueMatterCrafting", new ItemStack(WhatsTheMatter.blueMatter, 1));
+		}
+
+		if (WhatsTheMatter.spongeCraftsEnabled == 1) {
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', "whatsthematter:sponges")
+				.addInput('M', WhatsTheMatter.whiteMatter)
+				.create("blueMatterCrafting", new ItemStack(WhatsTheMatter.spongeMatter, 1));
 		}
 	}
 }

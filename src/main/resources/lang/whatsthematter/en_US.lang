@@ -16,3 +16,6 @@ tile.whatsthematter.bluematter.desc=Block of unknown matter that will fill your 
 
 tile.whatsthematter.whitematter.name=White Matter
 tile.whatsthematter.whitematter.desc=Block of unknown matter that is used to craft other matter blocks
+
+tile.whatsthematter.spongematter.name=Sponge Matter
+tile.whatsthematter.spongematter.desc=Block of unknown matter that will clear up any lava or water
