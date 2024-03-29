@@ -20,7 +20,7 @@ public class HotMatter extends Block {
 			for (j = -1; j <= 1; j ++) {
 				for (k = -1; k <= 1; k ++) {
 					if (world.getBlockId(x+i, y+j, z+k) == Block.ice.id) {
-						world.setBlock(x + i, y + j, z + k, WhatsTheMatter.coldMatter.id);
+						world.setBlock(x + i, y + j, z + k, WhatsTheMatter.hotMatter.id);
 						world.setBlock(x, y, z, Block.fluidWaterFlowing.id);
 					}
 					if (world.getBlockId(x+i, y+j, z+k) == Block.fluidWaterFlowing.id || world.getBlockId(x+i, y+j, z+k) == Block.fluidWaterStill.id) {
@@ -33,7 +33,7 @@ public class HotMatter extends Block {
 			for (j = -1; j <= 1; j ++) {
 				for (k = -1; k <= 1; k ++) {
 					if (world.getBlockId(x+i, y+j, z+k) == Block.obsidian.id) {
-						world.setBlock(x + i, y + j, z + k, WhatsTheMatter.coldMatter.id);
+						world.setBlock(x + i, y + j, z + k, WhatsTheMatter.hotMatter.id);
 						world.setBlock(x, y, z, Block.fluidLavaFlowing.id);
 					}
 					if (world.getBlockId(x+i, y+j, z+k) == Block.fluidLavaFlowing.id || world.getBlockId(x+i, y+j, z+k) == Block.fluidLavaStill.id) {
