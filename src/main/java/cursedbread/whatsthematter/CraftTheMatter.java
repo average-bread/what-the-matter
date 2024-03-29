@@ -33,7 +33,7 @@ public class CraftTheMatter implements RecipeEntrypoint {
 		if (WhatsTheMatter.noteCraftsEnabled == 1) {
 			RecipeBuilder.Shapeless(MOD_ID)
 				.addInput(Item.book)
-				.addInput(Item.dye, 15)
+				.addInput(Item.dye, 0)
 				.addInput(Item.featherChicken)
 				.addInput(Item.dustGlowstone)
 				.addInput(Item.dustRedstone)
