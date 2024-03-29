@@ -46,6 +46,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static int orangeCraftsEnabled;
 	public static int blueCraftsEnabled;
 	public static int spongeCraftsEnabled;
+	public static int coldCraftsEnabled;
+	public static int hotCraftsEnabled;
 
 	public static Block redMatter;
 	public static Block grayMatter;
@@ -53,7 +55,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static Block blueMatter;
 	public static Block whiteMatter;
 	public static Block spongeMatter;
-
+	public static Block coldMatter;
+	public static Block hotMatter;
 	public static Item containingNote;
 
 	static {
@@ -66,6 +69,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		prop.setProperty("Orange_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Blue_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Sponge_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Cold_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Hot_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
@@ -77,6 +82,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		orangeCraftsEnabled= config.getInt("Orange_Matter_crafting(0_means_no_|_1_means_yes)");
 		blueCraftsEnabled = config.getInt("Blue_Matter_crafting(0_means_no_|_1_means_yes)");
 		spongeCraftsEnabled = config.getInt("Sponge_Matter_crafting(0_means_no_|_1_means_yes)");
+		coldCraftsEnabled = config.getInt("Cold_Matter_crafting(0_means_no_|_1_means_yes)");
+		hotCraftsEnabled = config.getInt("Hot_Matter_crafting(0_means_no_|_1_means_yes)");
 
 		config.updateConfig();
 	}
@@ -111,6 +118,14 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		spongeMatter = matterBlock
 			.setTextures("sponge_matter.png")
 			.build(new SpongeMatter("spongematter", blockId++));
+
+		coldMatter = matterBlock
+			.setTextures("cold_matter.png")
+			.build(new ColdMatter("coldmatter", blockId++));
+
+		hotMatter = matterBlock
+			.setTextures("hot_matter.png")
+			.build(new HotMatter("hotmatter", blockId++));
 
 		containingNote = ItemHelper.createItem(MOD_ID, new ContainingNote("containingnote", itemId++), "containing_note.png");
 

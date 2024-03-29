@@ -7,6 +7,8 @@
 4. Blue Matter
 5. White Matter
 6. Sponge Matter
+7. Cold Matter
+8. Hot Matter
 
 * Red Matter is based on red crystal from the old SCP mod. It will grow infinitely but can be stopped and contained using...walls
 
@@ -19,6 +21,10 @@
 * White Matter can be summoned using Containment Note and it is used to craft all the other matter blocks and grow when exploded
 
 * Sponge Matter is a block that removes any water or lava it comes in contact
+
+* Cold Matter is a block that freezes nearby water and lava
+
+* Hot Matter is a block that melts nearby ice and obsidian
 
 ## Items
 1. Containment Note

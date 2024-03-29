@@ -19,3 +19,9 @@ tile.whatsthematter.whitematter.desc=Block of unknown matter that is used to cra
 
 tile.whatsthematter.spongematter.name=Sponge Matter
 tile.whatsthematter.spongematter.desc=Block of unknown matter that will clear up any lava or water
+
+tile.whatsthematter.coldmatter.name=Cold Matter
+tile.whatsthematter.coldmatter.desc=Block of unknown matter that will freeze water into ice and lava into obsidian
+
+tile.whatsthematter.hotmatter.name=Hot Matter
+tile.whatsthematter.hotmatter.desc=Block of unknown matter that will melt ice into water and obsidian into lava

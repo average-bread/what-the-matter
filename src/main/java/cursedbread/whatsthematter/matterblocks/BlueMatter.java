@@ -11,19 +11,17 @@ public class BlueMatter extends Block {
 	public BlueMatter(String key, int id) {
 		super(key, id, Material.stone);
 	}
-	int i = 5;
-	protected int ticks = 0;
+	int i;
+	int j;
 
 	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
-		if (world.getBlockId(x+1, y, z) == 0)  {
-			world.setBlock(x+1, y, z, WhatsTheMatter.blueMatter.id);
-		} if (world.getBlockId(x-1, y, z) == 0)  {
-			world.setBlock(x-1, y, z, WhatsTheMatter.blueMatter.id);
-		}  if (world.getBlockId(x, y, z+1) == 0)  {
-			world.setBlock(x, y, z+1, WhatsTheMatter.blueMatter.id);
-		} if (world.getBlockId(x, y, z-1) == 0)  {
-			world.setBlock(x, y, z-1, WhatsTheMatter.blueMatter.id);
+		for (i = -1; i <= 1; i++) {
+			for (j = -1; j <= 1; j++) {
+				if (world.getBlockId(x + i, y, z +j) == 0) {
+					world.setBlock(x + i, y, z +j, WhatsTheMatter.blueMatter.id);
+				}
+			}
+			world.setBlock(x, y, z, Block.fluidWaterFlowing.id);
 		}
-		world.setBlock(x, y, z, Block.fluidWaterFlowing.id);
 	}
 }

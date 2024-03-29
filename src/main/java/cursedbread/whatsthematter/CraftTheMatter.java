@@ -31,6 +31,14 @@ public class CraftTheMatter implements RecipeEntrypoint {
 		Registries.ITEM_GROUPS.register("whatsthematter:sponges", Registries.stackListOf(
 			Block.spongeDry,
 			Block.spongeWet));
+
+		Registries.ITEM_GROUPS.register("whatsthematter:coldwater", Registries.stackListOf(
+			Block.ice,
+			Block.permaice));
+
+		Registries.ITEM_GROUPS.register("whatsthematter:coldlava", Registries.stackListOf(
+			Block.obsidian,
+			Block.netherrackIgneous));
 	}
 	@Override
 	public void onRecipesReady() {
@@ -77,7 +85,25 @@ public class CraftTheMatter implements RecipeEntrypoint {
 				.setShape("HHH", "HMH", "HHH")
 				.addInput('H', "whatsthematter:sponges")
 				.addInput('M', WhatsTheMatter.whiteMatter)
-				.create("blueMatterCrafting", new ItemStack(WhatsTheMatter.spongeMatter, 1));
+				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.spongeMatter, 1));
+		}
+
+		if (WhatsTheMatter.spongeCraftsEnabled == 1) {
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("BHB", "HMH", "BHB")
+				.addInput('H', "whatsthematter:coldwater")
+				.addInput('B', "whatsthematter:coldlava")
+				.addInput('M', WhatsTheMatter.whiteMatter)
+				.create("coldMatterCrafting", new ItemStack(WhatsTheMatter.coldMatter, 1));
+		}
+
+		if (WhatsTheMatter.spongeCraftsEnabled == 1) {
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("BHB", "HMH", "BHB")
+				.addInput('H', Item.bucketWater)
+				.addInput('B', Item.bucketLava)
+				.addInput('M', WhatsTheMatter.whiteMatter)
+				.create("coldMatterCrafting", new ItemStack(WhatsTheMatter.coldMatter, 1));
 		}
 	}
 }

@@ -11,22 +11,19 @@ public class GrayMatter extends Block {
 	public GrayMatter(String key, int id) {
 		super(key, id, Material.stone);
 	}
-	int i = 5;
-	protected int ticks = 0;
+	int i;
+	int j;
+	int k;
 
 	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
-		if (world.getBlockId(x+1, y, z) != 0)  {
-			world.setBlock(x+1, y, z, WhatsTheMatter.grayMatter.id);
-		} if (world.getBlockId(x-1, y, z) != 0)  {
-			world.setBlock(x-1, y, z, WhatsTheMatter.grayMatter.id);
-		} if (world.getBlockId(x, y+1, z) != 0)  {
-			world.setBlock(x, y+1, z, WhatsTheMatter.grayMatter.id);
-		} if (world.getBlockId(x, y-1, z) != 0)  {
-			world.setBlock(x, y-1, z, WhatsTheMatter.grayMatter.id);
-		} if (world.getBlockId(x, y, z+1) != 0)  {
-			world.setBlock(x, y, z+1, WhatsTheMatter.grayMatter.id);
-		} if (world.getBlockId(x, y, z-1) != 0)  {
-			world.setBlock(x, y, z-1, WhatsTheMatter.grayMatter.id);
+		for (i = -1; i <=1; i++) {
+			for (j = -1; j <=1; j++) {
+				for (k = -1; k <=1; k++) {
+					if (world.getBlockId(x+i, y+j, z+k) != 0)  {
+						world.setBlock(x+i, y+j, z+k, WhatsTheMatter.grayMatter.id);
+					}
+				}
+			}
 		}
 		world.setBlock(x, y, z, 0);
 	}
