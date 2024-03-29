@@ -44,6 +44,7 @@ public class ContainingNote extends Item {
 			}
 		}
 		world.setBlock(x, y, z, WhatsTheMatter.whiteMatter.id);
+		stack.consumeItem(player);
 		return true;
 	}
 }
