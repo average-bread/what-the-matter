@@ -34,6 +34,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		.setBlockModel(new BlockModelRenderBlocks(0))
 		.setTags(BlockTags.FENCES_CONNECT)
 		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.setTags(BlockTags.SKATEABLE)
 		.setHardness(5.0f)
 		.setResistance(10.0f)
 		.setBlockSound(BlockSounds.STONE);

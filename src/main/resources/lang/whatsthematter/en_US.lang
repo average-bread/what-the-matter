@@ -1,5 +1,5 @@
-item.whatsthematter.containingnote.name=Containing Note
-item.whatsthematter.containingnote.desc=Containing note to spawn an unknown matter
+item.whatsthematter.containingnote.name=Containment Note
+item.whatsthematter.containingnote.desc=Containment note that list information about new live form! Right click on any block to spawn a containment cell
 
 tile.whatsthematter.redmatter.name=Red Matter
 tile.whatsthematter.redmatter.desc=Block of unknown matter that definitely "should" be placed near the open air

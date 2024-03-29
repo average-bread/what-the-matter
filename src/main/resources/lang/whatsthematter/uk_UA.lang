@@ -1,0 +1,26 @@
+item.whatsthematter.containingnote.name=Інструкція Щодо Зберігання
+item.whatsthematter.containingnote.desc=Інструкція, що містить інформацію про нову форму життя! Клацніть правою кнопкою миші по будь-якому блоку, щоб згенерувати камеру збегірання
+
+tile.whatsthematter.redmatter.name=Червона Матеря
+tile.whatsthematter.redmatter.desc=Блок невідомої матерії яку точно "варто" залишати на відкритому повітрі
+
+tile.whatsthematter.graymatter.name=Сіра Матеря
+tile.whatsthematter.graymatter.desc=Блок невідомої матерії який знищує абсолютно всі броки
+
+tile.whatsthematter.orangematter.name=Оранджева Матеря
+tile.whatsthematter.orangematter.desc=Блок невідомої матерії який наповнить ваш світ лавою
+
+tile.whatsthematter.bluematter.name=Синя Матеря
+tile.whatsthematter.bluematter.desc=Блок невідомої матерії який наповнить ваш світ водою
+
+tile.whatsthematter.whitematter.name=Біла Матеря
+tile.whatsthematter.whitematter.desc=Блок невідомої матерії який потрібен для крафту всіх інших видів матерії
+
+tile.whatsthematter.spongematter.name=Губчаста Матеря
+tile.whatsthematter.spongematter.desc=Блок невідомої матерії який знищує блоки води і лави при контакті
+
+tile.whatsthematter.coldmatter.name=Холодна Матеря
+tile.whatsthematter.coldmatter.desc=Блок невідомої матерії що здатен перетворювати воду в лід і лаву в обсидіан
+
+tile.whatsthematter.hotmatter.name=Гаряча Матеря
+tile.whatsthematter.hotmatter.desc=Блок невідомої матерії що здатен перетворювати лід в воду і обсидіан в лаву
