@@ -85,23 +85,23 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public void beforeGameStart() {
 
 		redMatter = matterBlock
-			.setTextures("redmatter.png")
+			.setTextures("red_matter.png")
 			.build(new RedMatter("redmatter", blockId++));
 
 		grayMatter = matterBlock
-			.setTextures("graymatter.png")
+			.setTextures("gray_matter.png")
 			.build(new GrayMatter("graymatter", blockId++));
 
 		orangeMatter = matterBlock
-			.setTextures("orangematter.png")
+			.setTextures("orange_matter.png")
 			.build(new OrangeMatter("orangematter", blockId++));
 
 		blueMatter = matterBlock
-			.setTextures("bluematter.png")
+			.setTextures("blue_matter.png")
 			.build(new BlueMatter("bluematter", blockId++));
 
 		whiteMatter = matterBlock
-			.setTextures("whitematter.png")
+			.setTextures("white_matter.png")
 			.build(new WhiteMatter("whitematter", blockId++));
 
 		containingNote = ItemHelper.createItem(MOD_ID, new ContainingNote("containingnote", itemId++), "containing_note.png");
