@@ -38,7 +38,10 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		.setBlockSound(BlockSounds.STONE);
 
 	public static int blockId;
-	public static int craftsEnabled;
+	public static int redCraftsEnabled;
+	public static int grayCraftsEnabled;
+	public static int orangeCraftsEnabled;
+	public static int blueCraftsEnabled;
 
 	public static Block redMatter;
 	public static Block grayMatter;
@@ -48,11 +51,17 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	static {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id","2000");
-		prop.setProperty("do_crafting (0 - no, 1 - yes)", "0");
+		prop.setProperty("Red Matter crafting (0 - no, 1 - yes)", "0");
+		prop.setProperty("Gray Matter crafting (0 - no, 1 - yes)", "0");
+		prop.setProperty("Orange Matter crafting (0 - no, 1 - yes)", "0");
+		prop.setProperty("Blue Matter crafting (0 - no, 1 - yes)", "0");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
-		craftsEnabled = config.getInt("do_crafting (0 - no, 1 - yes)");
+		redCraftsEnabled = config.getInt("Red Matter crafting (0 - no, 1 - yes)");
+		grayCraftsEnabled = config.getInt("Gray Matter crafting (0 - no, 1 - yes)");
+		orangeCraftsEnabled= config.getInt("Orange Matter crafting (0 - no, 1 - yes)");
+		blueCraftsEnabled = config.getInt("Blue Matter crafting (0 - no, 1 - yes)");
 
 		config.updateConfig();
 	}

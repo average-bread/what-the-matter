@@ -30,11 +30,29 @@ public class CraftTheMatter implements RecipeEntrypoint {
 	}
 	@Override
 	public void onRecipesReady() {
-		if (WhatsTheMatter.craftsEnabled == 1) {
+		if (WhatsTheMatter.redCraftsEnabled == 1) {
 			RecipeBuilder.Shapeless(MOD_ID)
-				.addInput(Block.dirt)
-				.addInput(Block.dirt)
-				.create("testCraft", new ItemStack(WhatsTheMatter.grayMatter, 1));
+				.addInput(Block.blockRedstone)
+				.addInput(Block.blockRedstone)
+				.create("redMatterCrafting", new ItemStack(WhatsTheMatter.redMatter, 1));
+		}
+		if (WhatsTheMatter.grayCraftsEnabled == 1) {
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput(Block.blockSteel)
+				.addInput(Block.blockSteel)
+				.create("grayMatterCrafting", new ItemStack(WhatsTheMatter.grayMatter, 1));
+		}
+		if (WhatsTheMatter.orangeCraftsEnabled == 1) {
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput(Item.bucketLava)
+				.addInput(Item.bucketLava)
+				.create("orangeMatterCrafting", new ItemStack(WhatsTheMatter.orangeMatter, 1));
+		}
+		if (WhatsTheMatter.blueCraftsEnabled == 1) {
+			RecipeBuilder.Shapeless(MOD_ID)
+				.addInput(Item.bucketWater)
+				.addInput(Item.bucketWater)
+				.create("blueMatterCrafting", new ItemStack(WhatsTheMatter.blueMatter, 1));
 		}
 	}
 }
