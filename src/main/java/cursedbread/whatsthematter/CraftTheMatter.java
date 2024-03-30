@@ -88,7 +88,7 @@ public class CraftTheMatter implements RecipeEntrypoint {
 				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.spongeMatter, 1));
 		}
 
-		if (WhatsTheMatter.spongeCraftsEnabled == 1) {
+		if (WhatsTheMatter.coldCraftsEnabled == 1) {
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("BHB", "HMH", "BHB")
 				.addInput('H', "whatsthematter:coldwater")
@@ -97,13 +97,21 @@ public class CraftTheMatter implements RecipeEntrypoint {
 				.create("coldMatterCrafting", new ItemStack(WhatsTheMatter.coldMatter, 1));
 		}
 
-		if (WhatsTheMatter.spongeCraftsEnabled == 1) {
+		if (WhatsTheMatter.hotCraftsEnabled == 1) {
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("BHB", "HMH", "BHB")
 				.addInput('H', Item.bucketWater)
 				.addInput('B', Item.bucketLava)
 				.addInput('M', WhatsTheMatter.whiteMatter)
 				.create("coldMatterCrafting", new ItemStack(WhatsTheMatter.hotMatter, 1));
+		}
+
+		if (WhatsTheMatter.spawnCraftsEnabled == 1) {
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', Block.mobspawnerDeactivated)
+				.addInput('M', WhatsTheMatter.whiteMatter)
+				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.spawnMatter, 1));
 		}
 	}
 }
