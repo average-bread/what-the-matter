@@ -24,3 +24,6 @@ tile.whatsthematter.coldmatter.desc=Блок невідомої матерії �
 
 tile.whatsthematter.hotmatter.name=Гаряча Матеря
 tile.whatsthematter.hotmatter.desc=Блок невідомої матерії що здатен перетворювати лід в воду і обсидіан в лаву
+
+tile.whatsthematter.spawnmatter.name=Спавняча Матеря
+tile.whatsthematter.spawnmatter.desc=???

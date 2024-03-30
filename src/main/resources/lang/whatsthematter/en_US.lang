@@ -25,3 +25,6 @@ tile.whatsthematter.coldmatter.desc=Block of unknown matter that will freeze wat
 
 tile.whatsthematter.hotmatter.name=Hot Matter
 tile.whatsthematter.hotmatter.desc=Block of unknown matter that will melt ice into water and obsidian into lava
+
+tile.whatsthematter.spawnmatter.name=Spawn Matter
+tile.whatsthematter.spawnmatter.desc=???

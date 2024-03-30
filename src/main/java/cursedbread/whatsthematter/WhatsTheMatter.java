@@ -131,6 +131,10 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 			.setTextures("hot_matter.png")
 			.build(new HotMatter("hotmatter", blockId++));
 
+		spawnMatter = matterBlock
+			.setTextures("spawn_matter.png")
+			.build(new HotMatter("spawnmatter", blockId++));
+
 		containingNote = ItemHelper.createItem(MOD_ID, new ContainingNote("containingnote", itemId++), "containing_note.png");
 
 	}
