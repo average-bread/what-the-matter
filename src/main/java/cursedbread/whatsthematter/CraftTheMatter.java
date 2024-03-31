@@ -17,7 +17,7 @@ import turniplabs.halplibe.util.RecipeEntrypoint;
 
 
 public class CraftTheMatter implements RecipeEntrypoint {
-	public static final String MOD_ID = "What's The Matter?";
+	public static final String MOD_ID = "whatsthematter";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
