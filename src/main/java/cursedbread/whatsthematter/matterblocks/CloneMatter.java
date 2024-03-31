@@ -19,7 +19,7 @@ public class CloneMatter extends Block {
 	int o;
 
 	public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
-		if (time == 10) {
+		if (time == 3) {
 			for (i= -1; i<=1; i++) {
 				if (world.getBlockId(x, y+i, z) !=0 && world.getBlockId(x, y+i, z) != Block.mobspawnerDeactivated.id && world.getBlockId(x, y+i, z) !=Block.mobspawner.id && world.getBlockId(x, y+i, z) != WhatsTheMatter.cloneMatter.id && world.getBlockId(x, y+i, z) != Block.bedrock.id) {
 					q = world.getBlockId(x, y+i, z);
