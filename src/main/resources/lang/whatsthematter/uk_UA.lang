@@ -27,3 +27,6 @@ tile.whatsthematter.hotmatter.desc=Блок невідомої матерії щ
 
 tile.whatsthematter.clonematter.name=Клонуюча Матеря
 tile.whatsthematter.clonematter.desc=Блок невідомої матерії який створює копію блоків що контактують з нею. Потрібено активовувати
+
+tile.whatsthematter.spawnmatter.name=Спавняча Матерія
+tile.whatsthematter.spawnmatter.desc=Блок невідомої матерії а якій моби частіше спаунятся

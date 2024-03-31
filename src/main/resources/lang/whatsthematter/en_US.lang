@@ -27,4 +27,7 @@ tile.whatsthematter.hotmatter.name=Hot Matter
 tile.whatsthematter.hotmatter.desc=Block of unknown matter that will melt ice into water and obsidian into lava
 
 tile.whatsthematter.clonematter.name=Clone Matter
-tile.whatsthematter.clonematter.desc=Block that creates a copy of the blocks that are touching it. Needs to be activated
+tile.whatsthematter.clonematter.desc=Block of unknown matter that creates a copy of the blocks that are touching it. Needs to be activated
+
+tile.whatsthematter.spawnmatter.name=Spawn Matter
+tile.whatsthematter.spawnmatter.desc=Block of unknown matter that mobs more likely to spawn on
