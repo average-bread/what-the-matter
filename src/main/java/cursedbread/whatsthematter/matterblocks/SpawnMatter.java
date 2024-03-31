@@ -19,7 +19,7 @@ public class SpawnMatter extends Block {
 		for (i = -1; i <= 1; i++) {
 			for (j = -1; j <= 1; j++) {
 				if (world.getBlockId(x + i, y, z +j) == 0) {
-					world.setBlock(x + i, y, z +j, WhatsTheMatter.spawnMatter.id);
+					world.setBlock(x + i, y, z +j, WhatsTheMatter.whiteMatter.id);
 				}
 			}
 		}
