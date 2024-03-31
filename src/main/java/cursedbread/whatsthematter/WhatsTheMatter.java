@@ -38,6 +38,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		.setResistance(10.0f)
 		.setBlockSound(BlockSounds.STONE);
 
+
 	public static int blockId;
 	public static int itemId;
 	public static int noteCraftsEnabled;
@@ -48,7 +49,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static int spongeCraftsEnabled;
 	public static int coldCraftsEnabled;
 	public static int hotCraftsEnabled;
-	public static int spawnCraftsEnabled;
+	public static int cloneCraftsEnabled;
 
 	public static Block redMatter;
 	public static Block grayMatter;
@@ -58,7 +59,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static Block spongeMatter;
 	public static Block coldMatter;
 	public static Block hotMatter;
-	public static Block spawnMatter;
+	public static Block cloneMatter;
 	public static Item containingNote;
 
 	static {
@@ -73,7 +74,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		prop.setProperty("Sponge_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Cold_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Hot_Matter_crafting(0_means_no_|_1_means_yes)", "1");
-		prop.setProperty("Spawn_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Clone_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
@@ -87,7 +88,7 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		spongeCraftsEnabled = config.getInt("Sponge_Matter_crafting(0_means_no_|_1_means_yes)");
 		coldCraftsEnabled = config.getInt("Cold_Matter_crafting(0_means_no_|_1_means_yes)");
 		hotCraftsEnabled = config.getInt("Hot_Matter_crafting(0_means_no_|_1_means_yes)");
-		spawnCraftsEnabled = config.getInt("Spawn_Matter_crafting(0_means_no_|_1_means_yes)");
+		cloneCraftsEnabled = config.getInt("Clone_Matter_crafting(0_means_no_|_1_means_yes)");
 
 		config.updateConfig();
 	}
@@ -131,9 +132,9 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 			.setTextures("hot_matter.png")
 			.build(new HotMatter("hotmatter", blockId++));
 
-		spawnMatter = matterBlock
-			.setTextures("spawn_matter.png")
-			.build(new SpawnMatter("spawnmatter", blockId++));
+		cloneMatter = matterBlock
+			.setTextures("clone_matter.png")
+			.build(new CloneMatter("clonematter", blockId++));
 
 		containingNote = ItemHelper.createItem(MOD_ID, new ContainingNote("containingnote", itemId++), "containing_note.png");
 

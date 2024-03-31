@@ -106,12 +106,12 @@ public class CraftTheMatter implements RecipeEntrypoint {
 				.create("coldMatterCrafting", new ItemStack(WhatsTheMatter.hotMatter, 1));
 		}
 
-		if (WhatsTheMatter.spawnCraftsEnabled == 1) {
+		if (WhatsTheMatter.cloneCraftsEnabled == 1) {
 			RecipeBuilder.Shaped(MOD_ID)
 				.setShape("HHH", "HMH", "HHH")
-				.addInput('H', Block.mobspawnerDeactivated)
+				.addInput('H', "minecraft:grasses")
 				.addInput('M', WhatsTheMatter.whiteMatter)
-				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.spawnMatter, 1));
+				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.cloneMatter, 1));
 		}
 	}
 }
