@@ -26,7 +26,7 @@ tile.whatsthematter.hotmatter.name=Гаряча Матеря
 tile.whatsthematter.hotmatter.desc=Блок невідомої матерії що здатен перетворювати лід в воду і обсидіан в лаву
 
 tile.whatsthematter.clonematter.name=Клонуюча Матеря
-tile.whatsthematter.clonematter.desc=Блок невідомої матерії який створює копію блоків що контактують з нею. Потрібено активовувати
+tile.whatsthematter.clonematter.desc=Блок невідомої матерії який створює копію блоків що контактують з нею. Активується зажиманням правої кнопки миші на деякий час
 
 tile.whatsthematter.spawnmatter.name=Спавняча Матерія
 tile.whatsthematter.spawnmatter.desc=Блок невідомої матерії а якій моби частіше спаунятся
