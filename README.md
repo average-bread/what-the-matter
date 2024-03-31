@@ -9,6 +9,7 @@
 6. Sponge Matter
 7. Cold Matter
 8. Hot Matter
+9. Clone Matter
 
 * Red Matter is based on red crystal from the old SCP mod. It will grow infinitely but can be stopped and contained using...walls
 
@@ -25,6 +26,8 @@
 * Cold Matter is a block that freezes nearby water and lava
 
 * Hot Matter is a block that melts nearby ice and obsidian
+
+* Clone Matter is a block that clones connected blocks when right-clicked for some time
 
 ## Items
 1. Containment Note
