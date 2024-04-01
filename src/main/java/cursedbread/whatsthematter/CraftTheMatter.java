@@ -113,5 +113,21 @@ public class CraftTheMatter implements RecipeEntrypoint {
 				.addInput('M', WhatsTheMatter.whiteMatter)
 				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.cloneMatter, 1));
 		}
+
+		if (WhatsTheMatter.mossCraftsEnabled == 1) {
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', "minecraft:moss_stones")
+				.addInput('M', WhatsTheMatter.whiteMatter)
+				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.mossMatter, 1));
+		}
+
+		if (WhatsTheMatter.unmossCraftsEnabled == 1) {
+			RecipeBuilder.Shaped(MOD_ID)
+				.setShape("HHH", "HMH", "HHH")
+				.addInput('H', Item.toolShears)
+				.addInput('M', WhatsTheMatter.whiteMatter)
+				.create("spongeMatterCrafting", new ItemStack(WhatsTheMatter.unmossMatter, 1));
+		}
 	}
 }
