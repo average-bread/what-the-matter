@@ -10,6 +10,8 @@
 7. Cold Matter
 8. Hot Matter
 9. Clone Matter
+10. Moss Matter
+11. Unmoss Matter
 
 * Red Matter is based on red crystal from the old SCP mod. It will grow infinitely but can be stopped and contained using...walls
 
@@ -28,6 +30,10 @@
 * Hot Matter is a block that melts nearby ice and obsidian
 
 * Clone Matter is a block that clones connected blocks when right-clicked for some time
+
+* Moss Matter is a block that grows moss on specific blocks
+
+* Unoss Matter is a block that cleans moss off specific blocks
 
 ## Items
 1. Containment Note
