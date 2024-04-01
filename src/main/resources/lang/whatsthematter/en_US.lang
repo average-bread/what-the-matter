@@ -31,3 +31,9 @@ tile.whatsthematter.clonematter.desc=Block of unknown matter that creates a copy
 
 tile.whatsthematter.spawnmatter.name=Spawn Matter
 tile.whatsthematter.spawnmatter.desc=Block of unknown matter that mobs more likely to spawn on
+
+tile.whatsthematter.mossmatter.name=Moss Matter
+tile.whatsthematter.mossmatter.desc=Block of unknown matter that convert some blocks into mossy variants
+
+tile.whatsthematter.unmossmatter.name=Unmoss Matter
+tile.whatsthematter.unmossmatter.desc=Block of unknown matter that convert mossy blocks into clean variants

@@ -30,3 +30,9 @@ tile.whatsthematter.clonematter.desc=Блок невідомої матерії 
 
 tile.whatsthematter.spawnmatter.name=Спавняча Матерія
 tile.whatsthematter.spawnmatter.desc=Блок невідомої матерії а якій моби частіше спаунятся
+
+tile.whatsthematter.mossmatter.name=Мохова Матерія
+tile.whatsthematter.mossmatter.desc=Блок невідомої матерії який покриває деякі блоки мохом
+
+tile.whatsthematter.unmossmatter.name=Антимохова Матерія
+tile.whatsthematter.unmossmatter.desc=Блок невідомої матерії який чистить мох з блоків

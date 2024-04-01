@@ -5,6 +5,7 @@ import cursedbread.whatsthematter.miscitems.ContainingNote;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.Block;
+import net.minecraft.core.block.BlockMoss;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.sound.BlockSounds;
@@ -38,6 +39,14 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		.setResistance(10.0f)
 		.setBlockSound(BlockSounds.STONE);
 
+	public static BlockBuilder mossyStone = new BlockBuilder(MOD_ID)
+		.setBlockModel(new BlockModelRenderBlocks(0))
+		.setTags(BlockTags.FENCES_CONNECT)
+		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.setHardness(5.0f)
+		.setResistance(10.0f)
+		.setBlockSound(BlockSounds.STONE);
+
 
 	public static int blockId;
 	public static int itemId;
@@ -50,6 +59,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static int coldCraftsEnabled;
 	public static int hotCraftsEnabled;
 	public static int cloneCraftsEnabled;
+	public static int mossCraftsEnabled;
+	public static int unmossCraftsEnabled;
 
 	public static Block redMatter;
 	public static Block grayMatter;
@@ -60,6 +71,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public static Block coldMatter;
 	public static Block hotMatter;
 	public static Block cloneMatter;
+	public static Block mossMatter;
+	public static Block unmossMatter;
 	public static Item containingNote;
 
 	static {
@@ -75,6 +88,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		prop.setProperty("Cold_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Hot_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		prop.setProperty("Clone_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Moss_Matter_crafting(0_means_no_|_1_means_yes)", "1");
+		prop.setProperty("Unmoss_Matter_crafting(0_means_no_|_1_means_yes)", "1");
 		ConfigHandler config = new ConfigHandler(MOD_ID,prop);
 
 		blockId = config.getInt("starting_block_id");
@@ -89,6 +104,8 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 		coldCraftsEnabled = config.getInt("Cold_Matter_crafting(0_means_no_|_1_means_yes)");
 		hotCraftsEnabled = config.getInt("Hot_Matter_crafting(0_means_no_|_1_means_yes)");
 		cloneCraftsEnabled = config.getInt("Clone_Matter_crafting(0_means_no_|_1_means_yes)");
+		mossCraftsEnabled = config.getInt("Moss_Matter_crafting(0_means_no_|_1_means_yes)");
+		unmossCraftsEnabled = config.getInt("Unmoss_Matter_crafting(0_means_no_|_1_means_yes)");
 
 		config.updateConfig();
 	}
@@ -101,40 +118,48 @@ public class WhatsTheMatter implements ModInitializer, GameStartEntrypoint {
 	public void beforeGameStart() {
 
 		redMatter = matterBlock
-			.setTextures("red_matter.png")
+			.setTextures("matter/red_matter.png")
 			.build(new RedMatter("redmatter", blockId++));
 
 		grayMatter = matterBlock
-			.setTextures("gray_matter.png")
+			.setTextures("matter/gray_matter.png")
 			.build(new GrayMatter("graymatter", blockId++));
 
 		orangeMatter = matterBlock
-			.setTextures("orange_matter.png")
+			.setTextures("matter/orange_matter.png")
 			.build(new OrangeMatter("orangematter", blockId++));
 
 		blueMatter = matterBlock
-			.setTextures("blue_matter.png")
+			.setTextures("matter/blue_matter.png")
 			.build(new BlueMatter("bluematter", blockId++));
 
 		whiteMatter = matterBlock
-			.setTextures("white_matter.png")
+			.setTextures("matter/white_matter.png")
 			.build(new WhiteMatter("whitematter", blockId++));
 
 		spongeMatter = matterBlock
-			.setTextures("sponge_matter.png")
+			.setTextures("matter/sponge_matter.png")
 			.build(new SpongeMatter("spongematter", blockId++));
 
 		coldMatter = matterBlock
-			.setTextures("cold_matter.png")
+			.setTextures("matter/cold_matter.png")
 			.build(new ColdMatter("coldmatter", blockId++));
 
 		hotMatter = matterBlock
-			.setTextures("hot_matter.png")
+			.setTextures("matter/hot_matter.png")
 			.build(new HotMatter("hotmatter", blockId++));
 
 		cloneMatter = matterBlock
-			.setTextures("clone_matter.png")
+			.setTextures("matter/clone_matter.png")
 			.build(new CloneMatter("clonematter", blockId++));
+
+		mossMatter = matterBlock
+			.setTextures("matter/moss_matter.png")
+			.build(new MossMatter("mossmatter", blockId++));
+
+		unmossMatter = matterBlock
+			.setTextures("matter/un_moss_matter.png")
+			.build(new UnMossMatter("unmossmatter", blockId++));
 
 		containingNote = ItemHelper.createItem(MOD_ID, new ContainingNote("containingnote", itemId++), "containing_note.png");
 
