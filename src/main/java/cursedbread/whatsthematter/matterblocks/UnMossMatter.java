@@ -20,7 +20,7 @@ public class UnMossMatter extends Block {
 			for (j = -1; j <= 1; j ++) {
 				for (k = -1; k <= 1; k ++) {
 					if (world.getBlockId(x+i, y+j, z+k) == Block.mossStone.id) {
-						world.setBlock(x + i, y + j, z + k, WhatsTheMatter.mossMatter.id);
+						world.setBlock(x + i, y + j, z + k, WhatsTheMatter.unmossMatter.id);
 						world.setBlock(x, y, z, Block.stone.id);
 					}
 					if (world.getBlockId(x+i, y+j, z+k) == Block.stone.id) {
